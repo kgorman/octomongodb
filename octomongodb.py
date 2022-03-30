@@ -1,6 +1,7 @@
 import requests
 import json
 import os
+import time
 
 SOURCE_BASE_URL = os.environ.get('SOURCE_BASE_URL')
 SOURCE_KEY = os.environ.get('SOURCE_KEY')
@@ -16,7 +17,8 @@ def fetch():
 
 def send():
     source_data = fetch()
-    source_data['createdAt'] = { "$date": { "$numberLong": "1638551310749" }}
+    now = str(round(time.time() * 1000))
+    source_data['createdAt'] = { "$date": { "$numberLong": now }}
 
     headers = {
         'Content-Type': 'application/json',
