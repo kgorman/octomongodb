@@ -36,7 +36,9 @@ def send():
     return response
 
 def main():
-    print(send())
+    while True:
+        print(send())
+        time.sleep(200)
 
 if __name__ == "__main__":
     main()
