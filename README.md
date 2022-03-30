@@ -12,7 +12,7 @@ For example:
 export SOURCE_BASE_URL="http://<octoprint IP>/api/printer?exclude=sd"
 export SOURCE_KEY="<api key defined in octoprint>"
 
-export TARGET_BASE_URL="https://data.mongodb-api.com/app/data-rriwi/endpoint/data/beta/action/insertOne"
+export TARGET_BASE_URL="https://data.mongodb-api.com/app/<endpoint_id>/endpoint/data/beta/action/insertOne"
 export TARGET_KEY="<api key from MongoDB Atlas"
 export TARGET_NAME="<your cluster name>" 
 ```
